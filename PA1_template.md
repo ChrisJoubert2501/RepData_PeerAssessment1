@@ -1,4 +1,9 @@
-# Reproducible Research: Peer Assessment 1
+---
+title: "Reproducible Research: Peer Assessment 1"
+output: 
+  html_document:
+    keep_md: true
+---
 
 
 ## Loading and preprocessing the data
@@ -28,7 +33,7 @@ SumSteps <- aggregate(.~date, data = activity[,c(1,2)], sum)
 hist(SumSteps$steps,main = "Histogram of the number of steps taken per day",breaks=20,xlab = "Number of Steps",ylim = c(0,20))
 ```
 
-![](PA1_template_files/figure-html/MeanStepsHist-1.png) 
+![plot of chunk MeanStepsHist](figure/MeanStepsHist-1.png) 
 
 
 The mean and median is then calculated.
@@ -50,7 +55,7 @@ plot(y=Avg5MinInt$steps,x=paste( Avg5MinInt$interval),type="l", xlab = "5-Min In
 title("Daily Step Pattern")
 ```
 
-![](PA1_template_files/figure-html/DailyPattern-1.png) 
+![plot of chunk DailyPattern](figure/DailyPattern-1.png) 
 
 The 5-min interval with the maximum average number of steps is then determined.
 
@@ -83,7 +88,7 @@ SumSteps2 <- aggregate(.~date, data = activity2[,c(1,2)], sum)
 hist(SumSteps2$steps,main = "Histogram of the number of steps taken per day",breaks=20,xlab = "Number of Steps", ylim = c(0,20))
 ```
 
-![](PA1_template_files/figure-html/NA_Replace-1.png) 
+![plot of chunk NA_Replace](figure/NA_Replace-1.png) 
 
 
 The mean and median is then calculated again.
@@ -120,7 +125,7 @@ par(mfrow = c(2, 1))
     title("Daily Step Pattern for Weekends")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-3-1.png) 
+![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-3-1.png) 
 
 
 
